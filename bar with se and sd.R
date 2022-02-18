@@ -54,3 +54,8 @@ ggplot(se, aes(x=, y=, fill=)) +
   labs(x="x", y = "y") +
   scale_fill_brewer(palette="Paired") + 
   theme_minimal()
+
+#To control the order in which categorical groups are presented along the x axis of the plot, add the following
+#position <- c("","","") #add groups in order that you want them to appear
+#scale_x_discrete(limits=position) +
+#scale_x_discrete(limits=position, guide = guide_axis(n.dodge = 2)) #Use this one instead if labels overlap
